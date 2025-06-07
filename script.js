@@ -1,33 +1,17 @@
-const pedras = [
-  {
-    nome: "Branco Siena",
-    cor: "#f2f2f2",
-    descricao: "Ideal para pias e bancadas modernas com acabamento polido.",
-    imagem: "https://images.unsplash.com/photo-1567016470775-39f1dc2fc418"
-  },
-  {
-    nome: "Verde Ubatuba",
-    cor: "#1b2e1e",
-    descricao: "Muito resistente, indicado para cozinhas e áreas externas.",
-    imagem: "https://images.unsplash.com/photo-1590080876865-d68f8d7f67d3"
-  },
-  {
-    nome: "Preto São Gabriel",
-    cor: "#111111",
-    descricao: "Elegante e versátil, perfeito para cozinhas e lavabos.",
-    imagem: "https://images.unsplash.com/photo-1594824476967-48c8b9642738"
-  }
-];
-
 const app = document.getElementById("app");
-
 const catalogo = document.createElement("div");
 catalogo.className = "catalogo";
 
-pedras.forEach(pedra => {
+materiais.forEach(pedra => {
   const div = document.createElement("div");
   div.className = "cor";
-  div.style.backgroundColor = pedra.cor;
+  if (pedra.imagemQuadrado) {
+    div.style.backgroundImage = `url(${pedra.imagemQuadrado})`;
+    div.style.backgroundSize = "cover";
+  } else {
+    div.style.backgroundColor = pedra.corFundo;
+  }
+  div.title = pedra.nome;
   div.onclick = () => mostrarModal(pedra);
   catalogo.appendChild(div);
 });
@@ -43,10 +27,15 @@ function mostrarModal(pedra) {
   content.className = "modal-content";
   content.onclick = e => e.stopPropagation();
 
+  const usosHtml = pedra.usos.map(uso => `<li>${uso}</li>`).join("");
+  const imagensHtml = pedra.imagens.map(url => `<img src="${url}" alt="${pedra.nome}">`).join("");
+
   content.innerHTML = `
     <h2>${pedra.nome}</h2>
     <p>${pedra.descricao}</p>
-    <img src="${pedra.imagem}" alt="${pedra.nome}">
+    <h3>Usos comuns:</h3>
+    <ul>${usosHtml}</ul>
+    ${imagensHtml}
   `;
 
   modal.appendChild(content);
