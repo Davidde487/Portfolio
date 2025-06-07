@@ -5,12 +5,15 @@ catalogo.className = "catalogo";
 materiais.forEach(pedra => {
   const div = document.createElement("div");
   div.className = "cor";
+
   if (pedra.imagemQuadrado) {
     div.style.backgroundImage = `url(${pedra.imagemQuadrado})`;
     div.style.backgroundSize = "cover";
+    div.style.backgroundPosition = "center";
   } else {
     div.style.backgroundColor = pedra.corFundo;
   }
+
   div.title = pedra.nome;
   div.onclick = () => mostrarModal(pedra);
   catalogo.appendChild(div);
