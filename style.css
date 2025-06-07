@@ -44,4 +44,15 @@ img {
   border-radius: 8px;
   display: inline-block;
   vertical-align: top;
+}{
+  nome: "NOME DA PEDRA",
+  corFundo: "#aabbcc", // ou deixe "" se usar imagem
+  descricao: "Sua descrição aqui",
+  usos: ["Pias", "Cozinhas", "Outro uso"],
+  imagemQuadrado: "URL_da_imagem.jpg",
+  imagens: [
+    "URL_imagem1.jpg",
+    "URL_imagem2.jpg"
+  ]
 }
+
