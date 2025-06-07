@@ -18,7 +18,7 @@ const materiais = [
     imagemQuadrado: "",
     imagens: [
       "https://images.unsplash.com/photo-1590080876865-d68f8d7f67d3",
-      "https://images.unsplash.com/photo-1501594907352-04cda38ebc29"
+      ""
     ]
   },
   {
