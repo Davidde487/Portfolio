@@ -1,58 +1,67 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
+  background: #f4f4f4;
   margin: 0;
-  background: #f8f8f8;
+  padding: 0;
 }
+
+#app {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
 .catalogo {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 2rem;
-  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
 }
+
 .cor {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
 }
+
+.cor:hover {
+  transform: scale(1.05);
+}
+
 .modal {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
+
 .modal-content {
   background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 400px;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 700px;
   width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
 }
-img {
-  width: 100%;
-  border-radius: 8px;
-  margin-top: 1rem;
+
+.modal-content h2 {
+  margin-top: 0;
 }
+
 .modal-content img {
   width: 48%;
   margin: 1% 1% 0 0;
   border-radius: 8px;
   display: inline-block;
   vertical-align: top;
-}{
-  nome: "NOME DA PEDRA",
-  corFundo: "#aabbcc", // ou deixe "" se usar imagem
-  descricao: "Sua descrição aqui",
-  usos: ["Pias", "Cozinhas", "Outro uso"],
-  imagemQuadrado: "URL_da_imagem.jpg",
-  imagens: [
-    "URL_imagem1.jpg",
-    "URL_imagem2.jpg"
-  ]
 }
-
