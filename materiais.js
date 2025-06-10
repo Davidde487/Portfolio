@@ -33,3 +33,28 @@ const materiais = [
     ]
   }
 ];
+<section id="materiais">
+  <h2>Nossos Materiais</h2>
+  <div class="galeria-materiais">
+    <div class="material-card">
+      <img src="images/amarelo-icarai.jpg" alt="Amarelo Icaraí">
+      <h3>Amarelo Icaraí</h3>
+    </div>
+    <div class="material-card">
+      <img src="images/amarelo-icarai-ambiente.jpg" alt="Amarelo Icaraí em Ambiente">
+      <h3>Amarelo Icaraí (Ambiente)</h3>
+    </div>
+    <div class="material-card">
+      <img src="images/amarelo-estelar.jpg" alt="Amarelo Estelar">
+      <h3>Amarelo Estelar</h3>
+    </div>
+    <div class="material-card">
+      <img src="images/amarelo-estelar-cozinha.jpg" alt="Amarelo Estelar na Cozinha">
+      <h3>Amarelo Estelar (Ambiente)</h3>
+    </div>
+    <div class="material-card">
+      <img src="images/amarelo-estelar-cozinha-2.jpg" alt="Amarelo Estelar em Cozinha Moderna">
+      <h3>Amarelo Estelar (Cozinha 2)</h3>
+    </div>
+  </div>
+</section>
