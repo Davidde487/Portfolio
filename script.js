@@ -40,6 +40,24 @@ function mostrarModal(pedra) {
     <ul>${usosHtml}</ul>
     ${imagensHtml}
   `;
+  const galeriaContainer = document.querySelector(".galeria-materiais");
+
+materiais.forEach((material) => {
+  const card = document.createElement("div");
+  card.classList.add("material-card");
+
+  const img = document.createElement("img");
+  img.src = material.imagemQuadrado || material.imagens[0];
+  img.alt = material.nome;
+
+  const nome = document.createElement("h3");
+  nome.textContent = material.nome;
+
+  card.appendChild(img);
+  card.appendChild(nome);
+  galeriaContainer.appendChild(card);
+});
+
 
   modal.appendChild(content);
   document.body.appendChild(modal);
