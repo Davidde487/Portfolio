@@ -1,10 +1,33 @@
 const materiais = [
   {
+    nome: "Amarelo Icaraí",
+    corFundo: "#f4e2b6",
+    descricao: "Tonalidade quente e elegante, ótima para cozinhas e banheiros.",
+    usos: ["Cozinhas", "Banheiros", "Revestimentos"],
+    imagemQuadrado: "images/amarelo-icarai.jpg",
+    imagens: [
+      "images/amarelo-icarai.jpg",
+      "images/amarelo-icarai-ambiente.jpg"
+    ]
+  },
+  {
+    nome: "Amarelo Estelar",
+    corFundo: "#e3c27d",
+    descricao: "Ideal para ambientes sofisticados e modernos.",
+    usos: ["Cozinhas", "Salas", "Lavabos"],
+    imagemQuadrado: "images/amarelo-estelar.jpg",
+    imagens: [
+      "images/amarelo-estelar.jpg",
+      "images/amarelo-estelar-cozinha.jpg",
+      "images/amarelo-estelar-cozinha-2.jpg"
+    ]
+  },
+  {
     nome: "Branco Siena",
-    corFundo: "#f2f2f2", // ou coloque uma imagem abaixo
+    corFundo: "#f2f2f2",
     descricao: "Ideal para pias e bancadas modernas com acabamento polido.",
     usos: ["Pias", "Bancadas", "Revestimentos"],
-    imagemQuadrado: "", // imagem opcional no quadrado (se quiser)
+    imagemQuadrado: "",
     imagens: [
       "https://images.unsplash.com/photo-1567016470775-39f1dc2fc418",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
@@ -17,8 +40,7 @@ const materiais = [
     usos: ["Cozinhas", "Áreas externas", "Balcões"],
     imagemQuadrado: "",
     imagens: [
-      "https://images.unsplash.com/photo-1590080876865-d68f8d7f67d3",
-      ""
+      "https://images.unsplash.com/photo-1590080876865-d68f8d7f67d3"
     ]
   },
   {
@@ -33,28 +55,3 @@ const materiais = [
     ]
   }
 ];
-<section id="materiais">
-  <h2>Nossos Materiais</h2>
-  <div class="galeria-materiais">
-    <div class="material-card">
-      <img src="images/amarelo-icarai.jpg" alt="Amarelo Icaraí">
-      <h3>Amarelo Icaraí</h3>
-    </div>
-    <div class="material-card">
-      <img src="images/amarelo-icarai-ambiente.jpg" alt="Amarelo Icaraí em Ambiente">
-      <h3>Amarelo Icaraí (Ambiente)</h3>
-    </div>
-    <div class="material-card">
-      <img src="images/amarelo-estelar.jpg" alt="Amarelo Estelar">
-      <h3>Amarelo Estelar</h3>
-    </div>
-    <div class="material-card">
-      <img src="images/amarelo-estelar-cozinha.jpg" alt="Amarelo Estelar na Cozinha">
-      <h3>Amarelo Estelar (Ambiente)</h3>
-    </div>
-    <div class="material-card">
-      <img src="images/amarelo-estelar-cozinha-2.jpg" alt="Amarelo Estelar em Cozinha Moderna">
-      <h3>Amarelo Estelar (Cozinha 2)</h3>
-    </div>
-  </div>
-</section>
